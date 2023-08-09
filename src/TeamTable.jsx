@@ -10,7 +10,7 @@ const TeamTable = () => {
   useEffect(() => {
     if (!isLoading) {
       const activeMembers = teamMembers.filter(
-        (member) => member.Status === "Active"
+        (member) => member.status === "Active"
       );
 
       setSortedMembers(activeMembers);
@@ -40,7 +40,7 @@ const TeamTable = () => {
   const handleDelete = (memberName) => {
     // Remove the member with the given name from the teamMembers array
     const updatedMembers = sortedMembers.filter(
-      (member) => member.Name !== memberName
+      (member) => member.name !== memberName
     );
     setSortedMembers(updatedMembers);
   };
@@ -53,7 +53,7 @@ const TeamTable = () => {
             <th scope="col" className="px-6 py-3">
               <div className="flex items-center">
                 Name
-                <a onClick={() => handleSort("Name")}>
+                <a onClick={() => handleSort("name")}>
                   <svg
                     className="w-3 h-3 ml-1.5"
                     aria-hidden="true"
@@ -69,7 +69,7 @@ const TeamTable = () => {
             <th scope="col" className="px-6 py-3">
               <div className="flex items-center">
                 Favorite Food
-                <a onClick={() => handleSort("Favorite Food")}>
+                <a onClick={() => handleSort("favoriteFood")}>
                   <svg
                     className="w-3 h-3 ml-1.5"
                     aria-hidden="true"
@@ -85,7 +85,7 @@ const TeamTable = () => {
             <th scope="col" className="px-6 py-3">
               <div className="flex items-center">
                 Favorite Movie
-                <a onClick={() => handleSort("Favorite Movie")}>
+                <a onClick={() => handleSort("favoriteMovie")}>
                   <svg
                     className="w-3 h-3 ml-1.5"
                     aria-hidden="true"
@@ -109,21 +109,21 @@ const TeamTable = () => {
         <tbody>
           {sortedMembers.map((member) => (
             <tr
-              key={member.Name}
+              key={member.name}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
             >
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                {member.Name}
+                {member.name}
               </th>
-              <td className="px-6 py-4">{member["Favorite Food"]}</td>
-              <td className="px-6 py-4">{member["Favorite Movie"]}</td>
-              <td className="px-6 py-4">{member.Status}</td>
+              <td className="px-6 py-4">{member.favoriteFood}</td>
+              <td className="px-6 py-4">{member.favoriteMovie}</td>
+              <td className="px-6 py-4">{member.status}</td>
               <td className="px-6 py-4">
                 <button
-                  onClick={() => handleDelete(member.Name)}
+                  onClick={() => handleDelete(member.name)}
                   className="text-red-500 hover:text-red-700"
                 >
                   Delete

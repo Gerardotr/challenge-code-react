@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const AddMemberForm = ({ onAddMember }) => {
   const [newMember, setNewMember] = useState({
-    Name: "",
-    "Favorite Food": "",
-    "Favorite Movie": "",
-    Status: "Active",
+    name: "",
+    favoriteFood: "",
+    favoriteMovie: "",
+    status: "Active",
   });
 
   const handleInputChange = (event) => {
@@ -22,10 +22,10 @@ const AddMemberForm = ({ onAddMember }) => {
     event.preventDefault();
     onAddMember(newMember);
     setNewMember({
-      Name: "",
-      "Favorite Food": "",
-      "Favorite Movie": "",
-      Status: "Active",
+      name: "",
+      favoriteFood: "",
+      favoriteMovie: "",
+      status: "Active",
     });
   };
 
@@ -35,13 +35,13 @@ const AddMemberForm = ({ onAddMember }) => {
       className="bg-white dark:bg-gray-800 shadow-md rounded-md p-6"
     >
       <h2 className="text-xl mb-4 text-gray-800 dark:text-white">
-        Add New Team Member
+        Add New Member
       </h2>
       <div className="mb-4">
         <input
           type="text"
-          name="Name"
-          value={newMember.Name}
+          name="name"
+          value={newMember.name}
           onChange={handleInputChange}
           className="w-full border rounded p-2 dark:bg-gray-700"
           placeholder="Name"
@@ -51,8 +51,8 @@ const AddMemberForm = ({ onAddMember }) => {
       <div className="mb-4">
         <input
           type="text"
-          name="Favorite Food"
-          value={newMember["Favorite Food"]}
+          name="favoriteFood"
+          value={newMember.favoriteFood}
           onChange={handleInputChange}
           className="w-full border rounded p-2 dark:bg-gray-700"
           placeholder="Favorite Food"
@@ -62,8 +62,8 @@ const AddMemberForm = ({ onAddMember }) => {
       <div className="mb-4">
         <input
           type="text"
-          name="Favorite Movie"
-          value={newMember["Favorite Movie"]}
+          name="favoriteMovie"
+          value={newMember.favoriteMovie}
           onChange={handleInputChange}
           className="w-full border rounded p-2 dark:bg-gray-700"
           placeholder="Favorite Movie"
