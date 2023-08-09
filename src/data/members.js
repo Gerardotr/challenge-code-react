@@ -1,27 +1,27 @@
 const teamMembers = [
   {
-    Name: 'Rocky',
-    'Favorite Food': 'Sushi',
-    'Favorite Movie': 'Back to The Future',
-    Status: 'Inactive',
+    name: "Rocky",
+    favoriteFood: "Sushi",
+    favoriteMovie: "Back to The Future",
+    status: "Inactive",
   },
   {
-    Name: 'Miroslav',
-    'Favorite Food': 'Sushi',
-    'Favorite Movie': 'American Psycho',
-    Status: 'Active',
+    name: "Miroslav",
+    favoriteFood: "Sushi",
+    favoriteMovie: "American Psycho",
+    status: "Active",
   },
   {
-    Name: 'Donny',
-    'Favorite Food': 'Singapore chow mei fun',
-    'Favorite Movie': 'The Princess Bride',
-    Status: 'Inactive',
+    name: "Donny",
+    favoriteFood: "Singapore chow mei fun",
+    favoriteMovie: "The Princess Bride",
+    Status: "Inactive",
   },
   {
-    Name: 'Matt',
-    'Favorite Food': 'Brisket Tacos',
-    'Favorite Movie': 'The Princess Bride',
-    Status: 'Active',
+    name: "Matt",
+    favoriteFood: "Brisket Tacos",
+    favoriteMovie: "The Princess Bride",
+    status: "Active",
   },
   // Add more team members as needed
 ];
